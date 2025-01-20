@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Assignment Task</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container" id="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="login-email" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="login-password" placeholder="Password" required>
+      </div>
+      <button type="submit">Login</button>
+      <div class="links">
+        <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+        <a href="#" onclick="showSignup()">Sign Up</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="container" id="signup-container" style="display: none;">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="signup-name" placeholder="Name" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="signup-email" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="signup-password" placeholder="Password" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+      <div class="links">
+        <a href="#" onclick="showLogin()">Already have an account? Login</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="container" id="forgot-password-container" style="display: none;">
+    <h2>Forgot Password</h2>
+    <form id="forgot-password-form">
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="forgot-password-email" placeholder="Enter your email" required>
+      </div>
+      <button type="submit">Send Reset Link</button>
+      <div class="links">
+        <a href="#" onclick="showLogin()">Back to Login</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="container" id="verification-container" style="display: none;">
+    <h2>Email Verification</h2>
+    <p id="verification-status">A verification link has been sent to your email.</p>
+    <button id="verify-btn" onclick="showLogin()">Go to Login</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
